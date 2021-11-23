@@ -1,0 +1,21 @@
+#bubblesort algorithm
+
+def bubbleSort(arr):
+  #set the length of the given array as an easy to access variable
+  lenarr = len(arr)
+  
+  #run through the array lenarr times, swapping adjacent values if the following value is lower than the previous one
+  for i in range(1, lenarr-1):
+    for j in range(lenarr-1):
+      if arr[j] > arr[j+1]:
+        #swap without a temp variable
+        arr[j] += arr[j+1]
+        arr[j+1] = arr[j] - arr[j+1]
+        arr[j] = arr[j] - arr[j+1]
+    #print arr
+  print arr
+
+#test function    
+def test():
+  arr = [55, 10, 52, 35, 15, 76, 22, 41]
+  bubbleSort(arr)         
